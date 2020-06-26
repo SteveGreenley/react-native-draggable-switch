@@ -57,7 +57,9 @@ export default class Switch extends Component<ISwitchProps> {
       onPanResponderMove: Animated.event([
         null,
         { dx: this.circleAnimations.direction },
-      ]),
+      ],{
+        useNativeDriver: true
+      }),
       onPanResponderRelease: this.onCircleTapOut,
     })
 
